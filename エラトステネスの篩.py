@@ -4,9 +4,8 @@ def main():
     b = True
     c = 0
     number = []
-    for a in range(10000000):
+    for a in range(100000):
         number += [a+1]
-    print("第一段階終了")
     while b:
         d = number[c]
         e = True
@@ -16,7 +15,7 @@ def main():
             while e:
                 f += [d*g]
                 g += 1
-                if d*g > 10000000:
+                if d*g > 100000:
                     e = False
                     for h in range(len(f)):
                         i = f[h] in number
@@ -29,6 +28,6 @@ def main():
     json.dump(number, file, ensure_ascii=False)
     file.close()
     k = time.time()
-    print("計算時間"+str(k-j))
+    print("素数の計算時間"+str(k-j))
 if __name__ == '__main__':
     main()

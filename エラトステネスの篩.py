@@ -13,6 +13,7 @@ def main():
                 del number[number.index(d*(l+2))]
         if d > count/2:
             break
+    del number[0]
     file = open("エラトステネスの篩.json", "w",encoding="utf-8")
     json.dump(number, file, ensure_ascii=False)
     file.close()
